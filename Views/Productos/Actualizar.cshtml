@@ -1,0 +1,28 @@
+@model Producto
+
+<h1>Formulario de actualización de producto @Model.Nombre</h1>
+
+<form action="~/productos/actualizar" method="post">
+
+<input type="hidden" asp-for="Id">
+
+<div class="form-group">
+    <label>Nombre:</label>
+    <input type="text" class="form-control" asp-for="Nombre" >
+    @Html.ValidationMessageFor(m => m.Nombre, "", new { @class = "text-danger" })
+</div>
+
+<div class="form-group">
+    <label>Foto:</label>
+    <input type="text" class="form-control" asp-for="Foto" >
+</div>
+
+<div class="form-group">
+    <label>Precio:</label>
+    <input type="text" class="form-control" asp-for="Precio" >
+    @Html.ValidationMessageFor(m => m.Precio, "", new { @class = "text-danger" })
+</div>
+
+<button class="btn btn-primary">Actualizar</button>
+
+</form>
