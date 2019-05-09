@@ -59,7 +59,7 @@ namespace CRUD
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=SistemaPagos}/{action=Index}/{id?}");
             });
         }
     }

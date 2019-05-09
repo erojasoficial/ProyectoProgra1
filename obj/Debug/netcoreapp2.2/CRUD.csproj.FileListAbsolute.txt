@@ -32,3 +32,4 @@ C:\Users\Enrique\Documents\2019\CRUD\obj\Debug\netcoreapp2.2\CRUD.dll
 C:\Users\Enrique\Documents\2019\CRUD\obj\Debug\netcoreapp2.2\CRUD.pdb
 C:\Users\Enrique\Documents\2019\CRUD\obj\Debug\netcoreapp2.2\CRUD.csproj.CopyComplete
 C:\Users\Enrique\Documents\2019\CRUD\obj\Debug\netcoreapp2.2\Razor\Views\SistemaPagos\Index.g.cshtml.cs
+C:\Users\Enrique\Documents\2019\CRUD\obj\Debug\netcoreapp2.2\Razor\Views\SistemaPagos\Registro_Alumnos.g.cshtml.cs

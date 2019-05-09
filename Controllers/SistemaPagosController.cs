@@ -14,5 +14,10 @@ namespace CRUD.Controllers
         {
             return View();
         }
+
+        public IActionResult Registro_Alumnos()
+        {
+            return View();
+        }
     }
 }
