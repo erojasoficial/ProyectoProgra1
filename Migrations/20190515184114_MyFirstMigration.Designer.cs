@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CRUD.Migrations
 {
     [DbContext(typeof(TiendaContext))]
-    [Migration("20190508163525_MyFirstMigration")]
+    [Migration("20190515184114_MyFirstMigration")]
     partial class MyFirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,6 +33,41 @@ namespace CRUD.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Productos");
+                });
+
+            modelBuilder.Entity("CRUD.Models.SistemaPago", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("Apellido");
+
+                    b.Property<string>("Apoderado");
+
+                    b.Property<string>("Aula");
+
+                    b.Property<string>("Celular");
+
+                    b.Property<string>("Ciclo");
+
+                    b.Property<string>("Correo");
+
+                    b.Property<string>("Direccion");
+
+                    b.Property<string>("Dni");
+
+                    b.Property<string>("Modalidad");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired();
+
+                    b.Property<string>("Postula");
+
+                    b.Property<string>("Turno");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SistemaPagos");
                 });
 #pragma warning restore 612, 618
         }

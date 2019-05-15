@@ -33,7 +33,7 @@ namespace CRUD
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-            services.AddDbContext<TiendaContext>(options => options.UseMySql(Configuration.GetConnectionString("Default")));
+            services.AddDbContext<TiendaContext>(options => options.UseMySql(Configuration.GetConnectionString("Default2")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 

@@ -10,7 +10,7 @@ namespace CRUD.Controllers
 
         public ProductosController(TiendaContext context) {
             _context = context;
-        }
+        } 
 
         public IActionResult Listar()
         {
