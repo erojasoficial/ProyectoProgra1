@@ -26,7 +26,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
                                <li><a target="_blank" href="~/SistemaPagos/Registro_Alumnos">REGISTRAR ALUMNO</a></li>
-                         
+                               <li><a target="_blank" href="reg_frut.php">REGISTRAR PAGO</a></li>
                                 
       </ul>
     </div>
@@ -66,16 +66,6 @@ $(document).ready(function(){
     } // End if
   });
   
-  $(window).scroll(function() {
-    $(".slideanim").each(function(){
-      var pos = $(this).offset().top;
-
-      var winTop = $(window).scrollTop();
-        if (pos < winTop + 600) {
-          $(this).addClass("slide");
-        }
-    });
-  });
 })
 </script>
 </body>
