@@ -30,8 +30,6 @@ namespace CRUD.Controllers
                 var productoBd = _context.Productos.Find(p.Id);
 
                 productoBd.Nombre = p.Nombre;
-                productoBd.Precio = p.Precio;
-                productoBd.Foto = p.Foto;
 
                 _context.SaveChanges();
 
