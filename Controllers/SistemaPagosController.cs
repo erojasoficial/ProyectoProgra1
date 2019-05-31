@@ -41,5 +41,43 @@ namespace CRUD.Controllers
 
             return View(alumnos);
         }
+
+         public IActionResult Actualizar(int id)
+        {
+            var p = _context.SistemaPagos.FirstOrDefault(x => x.Id == id);
+
+            if (p == null) {
+                return NotFound();
+            }
+
+            return View(p);
+        }
+
+        [HttpPost]
+        public IActionResult Actualizar(SistemaPago p)
+        {
+            if (ModelState.IsValid) {
+                var productoBd = _context.SistemaPagos.Find(p.Id);
+
+                productoBd.Nombre = p.Nombre;
+                productoBd.Apoderado = p.Apoderado;
+                productoBd.Direccion = p.Direccion;
+                productoBd.Dni = p.Dni;
+                productoBd.Celular = p.Celular;
+                productoBd.Correo = p.Correo;
+
+                productoBd.Turno = p.Turno;
+                productoBd.Aula = p.Aula;
+                productoBd.Ciclo = p.Ciclo;
+                productoBd.Modalidad = p.Modalidad;
+                productoBd.Postula = p.Postula;
+
+                _context.SaveChanges();
+
+                return RedirectToAction("Listar");
+            }
+
+            return View(p);
+        }
     }
 }

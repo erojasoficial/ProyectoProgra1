@@ -1,0 +1,143 @@
+@model SistemaPago
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <title>Registro de Alumnos</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <br>
+  <center><h2>Formulario de actualización de Alumno @Model.Nombre - Academia</h2>
+  <h2>Fermin Tanguis</h2></center>
+<br>    
+  <div class="container">
+    <!-- Control the column width, and how they should appear on different devices -->
+ <form action="~/SistemaPagos/Actualizar" method="post">
+    <div class="row">
+      <div class="col-sm-6">
+          <center><h3>Información Personal</h3></center>
+        <input type="hidden" asp-for="Id">
+        <div class="form-group">
+        <label>Apellidos y Nombres:</label>
+        <input type="text" class="form-control" asp-for="Nombre">
+        @Html.ValidationMessageFor(m => m.Nombre, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+        <label>Apoderado:</label>
+        <input type="text" class="form-control" asp-for="Apoderado">
+        @Html.ValidationMessageFor(m => m.Apoderado, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+        <label>Dirección:</label>
+        <input type="text" class="form-control" asp-for="Direccion">
+        @Html.ValidationMessageFor(m => m.Direccion, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+        <label>Dni:</label>
+        <input type="text" class="form-control" asp-for="Dni">
+        @Html.ValidationMessageFor(m => m.Dni, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+        <label>Celular:</label>
+        <input type="text" class="form-control" asp-for="Celular">
+        @Html.ValidationMessageFor(m => m.Celular, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+        <label>Correo:</label>
+        <input type="text" class="form-control" asp-for="Correo">
+        @Html.ValidationMessageFor(m => m.Correo, "", new { @class = "text-danger" })
+        </div>
+
+      </div>
+
+      <div class="col-sm-6">
+          <center><h3>Información Educativa</h3></center>
+    <center>
+        <div class="form-group col-sm-6">
+            <label for="sel1">Turno:</label>
+            <select class="form-control" asp-for="Turno">
+                <option value="mañana">MAÑANA</option>
+                <option value="tarde">TARDE</option>
+            </select>
+            @Html.ValidationMessageFor(m => m.Turno, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group col-sm-6">
+            <label for="sel1">Aula:</label>
+            <select class="form-control" asp-for="Aula">
+                <option value="2A">2A</option>
+                <option value="2B">2B</option>
+                <option value="2C">2C</option>
+                <option value="3B">3B</option>
+                <option value="3C">3C</option>
+                <option value="4A">4A</option>
+                <option value="4B">4B</option>
+                <option value="4C">4C</option>
+                <option value="4D">4D</option>
+            </select>
+            @Html.ValidationMessageFor(m => m.Aula, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group col-sm-6">
+            <label for="sel1">Ciclo:</label>
+            <select class="form-control" asp-for="Ciclo">
+                <option value="verano">VERANO</option>
+                <option value="semestral">SEMESTRAL</option>
+            </select>
+            @Html.ValidationMessageFor(m => m.Ciclo, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group col-sm-6">
+            <label for="sel1">Modalidad:</label>
+            <select class="form-control" asp-for="Modalidad">
+                <option value="ESCOLAR">ESCOLAR</option>
+                <option value="REGULAR">REGULAR</option>
+                <option value="TROPA">TROPA</option>
+                <option value="HIJO POLICIA O FFAA">HIJO POLICIA O FFAA</option>
+            </select>
+            @Html.ValidationMessageFor(m => m.Modalidad, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group col-sm-6">
+            <label for="sel1">Postula:</label>
+            <select class="form-control" asp-for="Postula">
+                <option value="EMCH">EMCH</option>
+                <option value="ETE">ETE</option>
+                <option value="INTEL">INTEL</option>
+                <option value="EOFAP">EOFAP</option>
+                <option value="ESOFAP">ESOFAP</option>
+                <option value="ESNA">ESNA</option>
+                <option value="CITEN">CITEN</option>
+                <option value="ENAM">ENAM</option>
+                <option value="EOPNP">EOPNP</option>
+                <option value="ETSPNP">ETSPNP</option>
+            </select>
+            @Html.ValidationMessageFor(m => m.Postula, "", new { @class = "text-danger" })
+        </div>
+    </center>
+
+      </div>
+    </div>
+    <br>
+    <center>
+    <button class="btn btn-primary">Actualizar</button>
+    </center>
+    <br>
+</form>
+  </div>
+</div>
+
+</body>
+</html>
