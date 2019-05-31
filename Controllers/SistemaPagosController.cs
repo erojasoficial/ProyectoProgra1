@@ -79,5 +79,17 @@ namespace CRUD.Controllers
 
             return View(p);
         }
+
+        public IActionResult Borrar(int id)
+        {
+            var p = _context.SistemaPagos.FirstOrDefault(x => x.Id == id);
+
+            if (p != null) {
+                _context.SistemaPagos.Remove(p);
+                _context.SaveChanges();
+            }
+
+            return RedirectToAction("Listar");
+        }
     }
 }
