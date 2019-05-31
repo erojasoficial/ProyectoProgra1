@@ -30,6 +30,7 @@ namespace CRUD.Controllers
                 var productoBd = _context.SistemaPagos.Find(p.Id);
 
                 productoBd.Nombre = p.Nombre;
+                productoBd.Nombre = p.Apellidos;
 
                 _context.SaveChanges();
 
