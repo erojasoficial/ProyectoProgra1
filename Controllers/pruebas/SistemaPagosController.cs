@@ -12,31 +12,6 @@ namespace CRUD.Controllers
             _context = context;
         }
 
-        public IActionResult Listar()
-        {
-            var productos = _context.Productos.ToList();
-
-            return View(productos);
-        }
-
-        public IActionResult Registrar()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult Registrar(Producto p)
-        {
-            if (ModelState.IsValid) {
-                _context.Productos.Add(p);
-                _context.SaveChanges();
-
-                return RedirectToAction("Listar");
-            }
-
-            return View(p);
-        }
-
         public IActionResult Actualizar(int id)
         {
             var p = _context.Productos.FirstOrDefault(x => x.Id == id);
