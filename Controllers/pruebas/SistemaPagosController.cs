@@ -14,7 +14,7 @@ namespace CRUD.Controllers
 
         public IActionResult Actualizar(int id)
         {
-            var p = _context.Productos.FirstOrDefault(x => x.Id == id);
+            var p = _context.SistemaPagos.FirstOrDefault(x => x.Id == id);
 
             if (p == null) {
                 return NotFound();
@@ -27,7 +27,7 @@ namespace CRUD.Controllers
         public IActionResult Actualizar(Producto p)
         {
             if (ModelState.IsValid) {
-                var productoBd = _context.Productos.Find(p.Id);
+                var productoBd = _context.SistemaPagos.Find(p.Id);
 
                 productoBd.Nombre = p.Nombre;
 
