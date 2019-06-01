@@ -6,14 +6,12 @@
     <tr>
         <th>Código</th>
         <th>Nombre</th>
-        <th>Foto</th>
     </tr>
 
         @foreach(var p in Model) {
         <tr>
             <td>@p.Id</td>
             <td>@p.Nombre</td>
-            <td><img src="@p.Foto" width="100"></td>
             <td>@p.Precio.ToString("C")</td>
             <td>
                 <a href="~/SistemaPago/actualizar/@p.Id">Relizar Pago</a>
