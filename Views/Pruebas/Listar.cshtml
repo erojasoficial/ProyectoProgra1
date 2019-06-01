@@ -1,0 +1,30 @@
+@model List<Producto>
+
+<h1>Listado de Alumnos</h1>
+
+<table class="table">
+    <tr>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Foto</th>
+    </tr>
+
+        @foreach(var p in Model) {
+        <tr>
+            <td>@p.Id</td>
+            <td>@p.Nombre</td>
+            <td><img src="@p.Foto" width="100"></td>
+            <td>@p.Precio.ToString("C")</td>
+            <td>
+                <a href="~/SistemaPago/actualizar/@p.Id">Relizar Pago</a>
+                <a href="~/SistemaPago/actualizar/@p.Id">Actualizar</a> | 
+                <a href="~/SistemaPago/borrar/@p.Id">Borrar</a>
+            </td>
+        </tr>
+    }
+    
+
+</table>
+
+
+<a href="~/productos/registrar">Registrar producto</a>
