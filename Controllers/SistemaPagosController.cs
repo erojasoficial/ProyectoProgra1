@@ -44,6 +44,13 @@ namespace CRUD.Controllers
             return View(alumnos);
         }
 
+        public IActionResult ReportePagos()
+        {
+            var alumnos = _context.SistemaPagos.ToList();
+
+            return View(alumnos);
+        }
+
          public IActionResult Actualizar(int id)
         {
             var p = _context.SistemaPagos.FirstOrDefault(x => x.Id == id);

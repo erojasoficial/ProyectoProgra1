@@ -72,3 +72,4 @@ C:\Users\Enrique\Documents\2019\progra1_software\ProyectoProgra1\obj\Debug\netco
 C:\Users\Enrique\Documents\2019\progra1_software\ProyectoProgra1\obj\Debug\netcoreapp2.2\CRUD.csproj.CopyComplete
 C:\Users\Enrique\Documents\2019\progra1_software\ProyectoProgra1\obj\Debug\netcoreapp2.2\Razor\Views\SistemaPagos\Actualizar.g.cshtml.cs
 C:\Users\Enrique\Documents\2019\progra1_software\ProyectoProgra1\obj\Debug\netcoreapp2.2\Razor\Views\SistemaPagos\Registro_Pagos.g.cshtml.cs
+C:\Users\Enrique\Documents\2019\progra1_software\ProyectoProgra1\obj\Debug\netcoreapp2.2\Razor\Views\SistemaPagos\ReportePagos.g.cshtml.cs

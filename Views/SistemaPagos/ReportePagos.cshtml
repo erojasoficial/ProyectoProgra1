@@ -1,0 +1,65 @@
+@model List<SistemaPago>
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <title>Reporte de Pagos</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <br>
+<h1>Reporte de Pagos
+</h1>
+
+<table class="table">
+    <tr>
+        <th>Código</th>
+        <th>Apellidos y Nombres</th>
+        <th>Dni</th>
+        <th>Pensión 1</th>
+        <th>Monto 1 </th>
+        <th>Pensión 2</th>
+        <th>Monto 2 </th>
+        <th>Pensión 3</th>
+        <th>Monto 3 </th>
+        <th>Pensión 4</th>
+        <th>Monto 4 </th>
+        <th>Pensión 5</th>
+        <th>Monto 5 </th>
+        <th>Pensión 6</th>
+        <th>Monto 6 </th>
+    </tr>
+
+    @foreach(var p in Model) {
+        <tr>
+            <td>@p.Id</td>
+            <td>@p.Nombre</td>
+            <td>@p.Dni</td>
+            <td>@p.Cuenta1</td>
+            <td>@p.Monto1</td>
+            <td>@p.Cuenta2</td>
+            <td>@p.Monto2</td>
+            <td>@p.Cuenta3</td>
+            <td>@p.Monto3</td>
+            <td>@p.Cuenta4</td>
+            <td>@p.Monto4</td>
+            <td>@p.Cuenta5</td>
+            <td>@p.Monto5</td>
+            <td>@p.Cuenta6</td>
+            <td>@p.Monto6</td>
+        </tr>
+    }
+    
+
+</table>
+
+
+<a href="~/SistemaPagos/Index">Inicio</a>
+</div>
+</body>
+</html>
