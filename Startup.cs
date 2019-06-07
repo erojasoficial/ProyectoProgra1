@@ -51,6 +51,11 @@ namespace CRUD
                 app.UseHsts();
             }
 
+             if (env.IsProduction() || env.IsStaging() || env.IsEnvironment("Staging_2"))
+        {
+            app.UseExceptionHandler("/Error");
+        }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();

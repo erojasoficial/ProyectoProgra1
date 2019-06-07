@@ -6,6 +6,7 @@ namespace CRUD.Models
     {
         public DbSet<Producto> Productos { get; set; }
         public DbSet<SistemaPago> SistemaPagos { get; set; }
+        public DbSet<Recibo> Recibos { get; set; }
 
         public TiendaContext(DbContextOptions<TiendaContext> options) : base(options) { }
 

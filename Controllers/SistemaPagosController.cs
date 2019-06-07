@@ -35,6 +35,8 @@ namespace CRUD.Controllers
             return View(p);
         }
 
+
+
         public IActionResult Listar()
         {
             var alumnos = _context.SistemaPagos.ToList();
@@ -52,6 +54,7 @@ namespace CRUD.Controllers
 
             return View(p);
         }
+
 
         [HttpPost]
         public IActionResult Actualizar(SistemaPago p)
@@ -78,6 +81,42 @@ namespace CRUD.Controllers
             }
 
             return View(p);
+        }
+
+        public IActionResult Registro_Pagos(int id)
+        {
+            var p = _context.SistemaPagos.FirstOrDefault(x => x.Id == id);
+
+            if (p == null) {
+                return NotFound();
+            }
+
+            return View(p);
+        }
+
+        [HttpPost]
+        public IActionResult Registro_Pagos(SistemaPago p)
+        {
+
+                var productoBd = _context.SistemaPagos.Find(p.Id);
+
+                productoBd.Cuenta1 = p.Cuenta1;
+                productoBd.Monto1 = p.Monto1;
+                productoBd.Cuenta2 = p.Cuenta2;
+                productoBd.Monto2 = p.Monto2;
+                productoBd.Cuenta3 = p.Cuenta3;
+                productoBd.Monto3 = p.Monto3;
+                productoBd.Cuenta4 = p.Cuenta4;
+                productoBd.Monto4 = p.Monto4;
+                productoBd.Cuenta5 = p.Cuenta5;
+                productoBd.Monto5 = p.Monto5;
+                productoBd.Cuenta6 = p.Cuenta6;
+                productoBd.Monto6 = p.Monto6;
+
+                _context.SaveChanges();
+
+                return RedirectToAction("Listar");
+            
         }
 
         public IActionResult Borrar(int id)

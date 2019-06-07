@@ -33,12 +33,46 @@ namespace CRUD.Migrations
                     b.ToTable("Productos");
                 });
 
-            modelBuilder.Entity("CRUD.Models.SistemaPago", b =>
+            modelBuilder.Entity("CRUD.Models.Recibo", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
-                    b.Property<string>("Apellido");
+                    b.Property<string>("Cuenta1");
+
+                    b.Property<string>("Cuenta2");
+
+                    b.Property<string>("Cuenta3");
+
+                    b.Property<string>("Cuenta4");
+
+                    b.Property<string>("Cuenta5");
+
+                    b.Property<string>("Cuenta6");
+
+                    b.Property<int>("Id_Alumno");
+
+                    b.Property<string>("Monto1");
+
+                    b.Property<string>("Monto2");
+
+                    b.Property<string>("Monto3");
+
+                    b.Property<string>("Monto4");
+
+                    b.Property<string>("Monto5");
+
+                    b.Property<string>("Monto6");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Recibos");
+                });
+
+            modelBuilder.Entity("CRUD.Models.SistemaPago", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd();
 
                     b.Property<string>("Apoderado");
 
@@ -50,11 +84,35 @@ namespace CRUD.Migrations
 
                     b.Property<string>("Correo");
 
+                    b.Property<string>("Cuenta1");
+
+                    b.Property<string>("Cuenta2");
+
+                    b.Property<string>("Cuenta3");
+
+                    b.Property<string>("Cuenta4");
+
+                    b.Property<string>("Cuenta5");
+
+                    b.Property<string>("Cuenta6");
+
                     b.Property<string>("Direccion");
 
                     b.Property<string>("Dni");
 
                     b.Property<string>("Modalidad");
+
+                    b.Property<string>("Monto1");
+
+                    b.Property<string>("Monto2");
+
+                    b.Property<string>("Monto3");
+
+                    b.Property<string>("Monto4");
+
+                    b.Property<string>("Monto5");
+
+                    b.Property<string>("Monto6");
 
                     b.Property<string>("Nombre")
                         .IsRequired();
