@@ -15,7 +15,7 @@ namespace CRUD.Controllers
         [HttpPost]
         public IActionResult Registro_Recibos(Recibo p)
         {
-            if (ModelState.IsValid) {
+            if (ModelState.IsValid ) {
                 _context.Recibos.Add(p);
                 _context.SaveChanges();
 
