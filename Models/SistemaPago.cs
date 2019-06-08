@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CRUD.Models
 {
-    public class Producto
+    public class SistemaPago
     {
         public int Id { get; set; }
 
