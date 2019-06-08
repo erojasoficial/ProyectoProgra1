@@ -9,7 +9,7 @@ namespace CRUD.Controllers
         private TiendaContext _context { get; }
 
         public RecibosController(TiendaContext context) {
-            _context = context;
+            _context =  context;
         } 
 
         [HttpPost]
