@@ -8,7 +8,7 @@ namespace CRUD.Models
 
         [Required]
         public string Nombre { get; set; }
-        public string Foto { get; set; }
+        public string Apellido { get; set; }
 
         [Required]
         public decimal Precio { get; set; }
