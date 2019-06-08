@@ -19,7 +19,7 @@ namespace CRUD.Controllers
                 _context.Recibos.Add(p);
                 _context.SaveChanges();
 
-                return RedirectToAction("Listar");
+                return RedirectToAction("Lista_r");
             }
 
             return View(p);
