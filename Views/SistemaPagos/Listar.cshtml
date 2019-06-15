@@ -1,17 +1,98 @@
 @model List<SistemaPago>
 <!DOCTYPE html>
-<html lang="en">
-<head> 
-  <title>Registro de Alumnos</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!--========== Theme Fonts ==========-->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,600,700,800" rel="stylesheet">
+
+    <!--Font Awesome css-->
+    <link rel="stylesheet" href="~/css/css/font-awesome.min.css">
+
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="~/css/css/bootstrap.min.css">
+
+    <!--Animated headline css-->
+    <link rel="stylesheet" href="~/css/css/jquery.animatedheadline.css">
+    
+	<!--Owl carousel css-->
+	<link rel="stylesheet" href="~/css/css/owl.carousel.css">
+	<link rel="stylesheet" href="~/css/css/owl.theme.default.css">
+    
+	<!--Magnific popup css-->
+	<link rel="stylesheet" href="~/css/css/magnific-popup.css">
+
+	<!--animate css-->
+	<link rel="stylesheet" href="~/css/css/animate.css">
+    
+	<!--Normalizer css-->
+	<link rel="stylesheet" href="~/css/css/normalize.css">
+
+    <!--Theme css-->
+    <link rel="stylesheet" href="~/css/css/style2.css">
+
+    <!--Responsive css-->
+    <link rel="stylesheet" href="~/css/css/responsive.css">
+
 </head>
 <body>
-    <div class="container">
+ 
+  
+
+ 
+    <header class="nav-area navbar-fixed-top">
+        <div class="container">
+            <div class="row">
+                <!--main menu starts-->
+
+                <div class="col-md-12">
+                    <div class="main-menu">
+                        <div class="navbar navbar-cus">
+                            <div class="navbar-header">
+                                <a href="~/SistemaPagos/" class="navbar-brand"><span class="logo">Listado de Alumnos</span></a>
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+
+                            <div class="navbar-collapse collapse">
+                                <nav>
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li class="active"><a href="~/SistemaPagos/Registro_Alumnos">REGISTRAR ALUMNO</a></li>
+                                        <li><a href="~/SistemaPagos/Listar">REGISTRAR PAGO</a></li>
+                                        <li><a href="~/SistemaPagos/ReportePagos">REPORTE PAGOS</a></li>
+                  
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--main menu ends-->
+            </div>
+        </div>
+    </header>
+
+ <div class="banner-area" id="home">
+<div class="banner-table">
+            <div class="banner-table-cell">
+                <div class="welcome-text">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <section class="intro animate-scale">
+
+
+  <div class="container">
         <br>
 <h1>Listado de Alumnos</h1>
 
@@ -40,7 +121,83 @@
 </table>
 
 
-<a href="~/SistemaPagos/Index">Inicio</a>
+
+
+
+                                </section></div></div></div></div></div>
+</div> 
 </div>
+
+    <script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+
+    <!--Bootstrap js-->
+    <script src="~/js/js/bootstrap.min.js"></script>
+
+	<!--Magnific popup js-->
+	<script src="~/js/js/jquery.magnific-popup.js"></script>
+
+	<!--Owl Carousel js-->
+	<script src="~/js/js/owl.carousel.js"></script>
+
+	<!--wow js-->
+	<script src="~/js/js/wow.min.js"></script>
+
+    <!--Animated headline js-->
+    <script src="~/js/js/jquery.animatedheadline.js"></script>
+    
+
+	<script src="~/js/js/custom.js"></script>
+    
+    <!--Validator js-->
+    <script src="~/js/js/jquery.waypoints.js"></script>
+    
+	<!--counter up js-->
+	<script src="~/js/js/jquery.counterup.min.js"></script>
+
+    <!--Validator js-->
+    <script src="~/js/js/validator.js"></script>
+
+    <!--Contact js-->
+    <script src="~/js/js/contact.js"></script>
+
+    <!--Main js-->
+    <script src="~/js/js/main.js"></script>
+
 </body>
 </html>
